@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'App de Tránsito del Estado de Quintana Roo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -56,6 +56,51 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  final licenciaButton = Padding(
+    padding: EdgeInsets.symmetric(vertical: 1.0),
+    child: Material(
+      elevation: 5.0,
+      child: MaterialButton(
+        height: 42.0,
+        minWidth: 350.0,
+        onPressed: () {
+        },
+        color: Colors.white,
+        child: Text('Tramitar licencia de conducir,', style: TextStyle(color: Colors.blue[200], fontSize: 17.0)),
+      ),
+    ),
+  );
+
+  final choferButton = Padding(
+    padding: EdgeInsets.symmetric(vertical: 1.0),
+    child: Material(
+      elevation: 5.0,
+      child: MaterialButton(
+        height: 42.0,
+        minWidth: 350.0,
+        onPressed: () {
+        },
+        color: Colors.white,
+        child: Text('Licencia de manejo chofer,', style: TextStyle(color: Colors.blue[200], fontSize: 17.0)),
+      ),
+    ),
+  );
+
+  final cargar = Padding(
+    padding: EdgeInsets.symmetric(vertical: 0.0),
+    child: Material(
+      elevation: 0.0,
+      child: MaterialButton(
+        height: 42.0,
+        onPressed: () {
+        },
+        color: Colors.yellow[400],
+        child: Text('Cargar más', style: TextStyle(color: Colors.black, fontSize: 17.0)),
+      ),
+    ),
+  );
+
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -65,45 +110,41 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent[400],
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug paint" (press "p" in the console where you ran
-          // "flutter run", or select "Toggle Debug Paint" from the Flutter tool
-          // window in IntelliJ) to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: new Column(
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              '\n\nTrámites disponibles.\n\n',
+                style: new TextStyle(
+                color: Colors.white,
+                fontSize: 35.0,
+                letterSpacing: 0.6
+              )
             ),
+            licenciaButton,
             Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+                '\n'
             ),
+            choferButton,
+            Text(
+                '\n'
+            ),
+            cargar,
+
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
