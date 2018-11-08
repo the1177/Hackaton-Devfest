@@ -50,8 +50,10 @@
     <Compile Include="Base\IContexto.cs" />
     <Compile Include="Base\IRepositorioBase.cs" />
     <Compile Include="Negocio\IAutosNegocio.cs" />
+    <Compile Include="Negocio\IPlacasNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\IAutosRepositorio.cs" />
+    <Compile Include="Repositorio\IPlacasRepositorio.cs" />
     <Compile Include="Uow\IUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup />

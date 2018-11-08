@@ -33,6 +33,14 @@ namespace Hackaton.Repositorio.Uow
             }
         }
 
+        public IPlacasRepositorio placasRepositorio
+        {
+            get
+            {
+                return this.ObtenerRepositorio<IPlacasRepositorio>(_dbContext, container);
+            }
+        }
+
         public void Dispose()
         {
             _dbContext.SaveChanges();

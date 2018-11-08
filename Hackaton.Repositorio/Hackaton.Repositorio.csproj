@@ -69,12 +69,11 @@
     <Compile Include="Base\RepositorioBase.cs" />
     <Compile Include="Contexto\ConexionDB.cs" />
     <Compile Include="Contexto\Configuraciones\Hackaton\ConfiguracionesDBO.cs" />
+    <Compile Include="PlacasRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Uow\UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

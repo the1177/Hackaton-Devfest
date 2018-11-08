@@ -20,4 +20,20 @@ namespace Hackaton.Repositorio.Contexto.Configuraciones.Hackaton
             Property(r => r.Multa);
         }
     }
+
+    public class ConfiguracionesPlacas : EntityTypeConfiguration<Placas>
+    {
+        public ConfiguracionesPlacas()
+        {
+            ToTable("Placas", "dbo");
+            HasKey(p => p.Id);
+            Property(p => p.PlacasAuto);
+            Property(p => p.Monto);
+            Property(p => p.Adeudos);
+            Property(p => p.Estatus).HasColumnType("varchar").HasMaxLength(100);
+            
+        }
+    }
+
+    
 }

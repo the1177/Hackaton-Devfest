@@ -11,6 +11,7 @@ namespace Hackaton.Contratos.Uow
     public interface IUnitOfWork : IDisposable
     {
         IAutosRepositorio autosRepositorio { get;  }
+        IPlacasRepositorio placasRepositorio { get; }
         void Guardar();
     }
 }

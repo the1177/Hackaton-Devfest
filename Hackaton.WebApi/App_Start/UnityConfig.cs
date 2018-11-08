@@ -2,6 +2,7 @@ using Hackaton.Contratos.Negocio;
 using Hackaton.Contratos.Repositorio;
 using Hackaton.Contratos.Uow;
 using Hackaton.Negocios.Autos;
+using Hackaton.Negocios.Placas;
 using Hackaton.Repositorio;
 using Hackaton.Repositorio.Uow;
 using System.Web.Http;
@@ -19,6 +20,10 @@ namespace Hackaton.WebApi
 			var container = new UnityContainer();
             container.RegisterType<IAutosRepositorio, AutosRepositorio>();
             container.RegisterType<IAutosNegocio, AutosNegocio>();
+
+
+            container.RegisterType<IPlacasRepositorio, PlacasRepositorio>();
+            container.RegisterType<IPlacasNegocio, PlacasNegocio>();
             // register all your components with the container here
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
 
