@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Hackaton\Autos.cs" />
     <Compile Include="Hackaton\Placas.cs" />
+    <Compile Include="Hackaton\Policias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

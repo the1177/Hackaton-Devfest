@@ -13,5 +13,6 @@ namespace Hackaton.Contratos.Base
         void Eliminar(T entity);
         bool Actualizar(T entidadExistente, T entidadNueva);
         List<T> ObtenerDatosPorConsulta(string sqlQuery, params object[] parametros);
+        List<C> GetFromDatabaseWithQuery<C>(string sqlQuery, params object[] parametros);
     }
 }

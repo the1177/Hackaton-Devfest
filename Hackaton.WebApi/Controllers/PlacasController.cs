@@ -23,8 +23,8 @@ namespace Hackaton.WebApi.Controllers
         {
             try
             {
-                var Resultado = this.placasNegocio.placa(placas);
-                return Ok(Resultado);
+                List<Placas> Multas = this.placasNegocio.Multas(placas);
+                return Ok(Multas);
             }
             catch (Exception ex)
             {
@@ -32,5 +32,7 @@ namespace Hackaton.WebApi.Controllers
                 throw;
             }
         }
+
+
     }
 }

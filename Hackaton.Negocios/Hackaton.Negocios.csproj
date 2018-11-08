@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Autos\AutosNegocio.cs" />
     <Compile Include="Placas\PlacasNegocio.cs" />
+    <Compile Include="Policias\PoliciasNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

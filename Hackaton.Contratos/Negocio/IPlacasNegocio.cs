@@ -10,5 +10,6 @@ namespace Hackaton.Contratos.Negocio
     public interface IPlacasNegocio
     {
         Placas placa(string Placa);
+        List<Entidades.Hackaton.Placas> Multas(string placa);
     }
 }

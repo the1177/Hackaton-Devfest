@@ -3,6 +3,7 @@ using Hackaton.Contratos.Repositorio;
 using Hackaton.Contratos.Uow;
 using Hackaton.Negocios.Autos;
 using Hackaton.Negocios.Placas;
+using Hackaton.Negocios.Policias;
 using Hackaton.Repositorio;
 using Hackaton.Repositorio.Uow;
 using System.Web.Http;
@@ -24,6 +25,9 @@ namespace Hackaton.WebApi
 
             container.RegisterType<IPlacasRepositorio, PlacasRepositorio>();
             container.RegisterType<IPlacasNegocio, PlacasNegocio>();
+
+            container.RegisterType<IPoliciasRepositorio, PoliciasRepositorio>();
+            container.RegisterType<IPoliciasNegocio, PoliciasNegocio>();
             // register all your components with the container here
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
 

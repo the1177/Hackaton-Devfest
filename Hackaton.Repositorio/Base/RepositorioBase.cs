@@ -34,6 +34,12 @@ namespace Hackaton.Repositorio.Base
             return true;
         }
 
+        public List<C> GetFromDatabaseWithQuery<C>(string sqlQuery, params object[] parametros)
+        {
+            var documentos = this.Contexto.Database.SqlQuery<C>(sqlQuery, parametros).ToList();
+            return documentos;
+        }
+
         public void Eliminar(T entity)
         {
             this.DbSet.Remove(entity);

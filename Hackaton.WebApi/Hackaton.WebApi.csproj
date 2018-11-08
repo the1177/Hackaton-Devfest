@@ -125,6 +125,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\PlacasController.cs" />
+    <Compile Include="Controllers\PoliciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
