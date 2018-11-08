@@ -49,16 +49,21 @@
   <ItemGroup>
     <Compile Include="Base\IContexto.cs" />
     <Compile Include="Base\IRepositorioBase.cs" />
+    <Compile Include="Negocio\IAutosNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\IAutosRepositorio.cs" />
+    <Compile Include="Uow\IUnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Negocio\" />
-    <Folder Include="Repositorio\" />
-    <Folder Include="Uow\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hackaton.Entidades\Hackaton.Entidades.csproj">
+      <Project>{2438C3FF-5CCF-4A33-A32C-0DB21DE4E916}</Project>
+      <Name>Hackaton.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

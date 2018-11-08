@@ -40,7 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autos\AutosNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hackaton.Contratos\Hackaton.Contratos.csproj">
+      <Project>{59B336B6-37AF-4AA8-A168-1B3DA93CD3A9}</Project>
+      <Name>Hackaton.Contratos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hackaton.Entidades\Hackaton.Entidades.csproj">
+      <Project>{2438C3FF-5CCF-4A33-A32C-0DB21DE4E916}</Project>
+      <Name>Hackaton.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
